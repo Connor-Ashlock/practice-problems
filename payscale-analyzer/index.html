@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function payscaleAnalyzer(payList) {
+      //takes an array searching for the highest and lowest number
+      //then subtracts those 2 numbers
+      let high = payList[0];
+      let low = payList[0];
+      for (let i = 0; i < payList.length; i++) {
+        if (payList[i] > high) {
+          high = payList[i];
+        }
+      }
+      for (let i = 0; i < payList.length; i++) {
+          if (payList[i] < low) {
+            low = payList[i];
+        }
+      }
+      return high - low;
+    }
+  </script>
+</body>
+</html>
