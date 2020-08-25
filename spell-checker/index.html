@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function spellChecker(userWords, correctWords) {
+      words = {
+        correct: [],
+        incorrect: []
+      }
+      for (let i = 0; i < userWords.length; i++) {
+        if (userWords[i] === correctWords[i]) {
+          words.correct.push(userWords[i])
+        } else {
+          words.incorrect.push(userWords[i])
+        }
+      }
+      return words;
+    }
+  </script>
+</body>
+</html>
