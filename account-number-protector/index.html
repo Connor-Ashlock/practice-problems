@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function accountNumberProtector(cardNumberString) {
+      let lastFour = '';
+      for (let i = 15; i > 11; i--) {
+        if (i > 11) {
+          lastFour = cardNumberString[i] + lastFour;
+        }
+      }
+      return `**${lastFour}`
+    }
+  </script>
+</body>
+</html>
