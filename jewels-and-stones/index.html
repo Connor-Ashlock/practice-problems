@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var numJewelsInStones = function (J, S) {
+        let count = 0;
+        const stones = {};
+        for (let i = 0; i < J.length; i++) {
+          stones[J[i]] = J[i];
+        }
+        for (let i = 0; i < S.length; i++) {
+          if (stones[S[i]] === S[i]) count++;
+        }
+        return count;
+      };
+  </script>
+</body>
+</html>
