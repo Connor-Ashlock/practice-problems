@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var subtractProductAndSum = function (n) {
+        const arr = (n + '').split('');
+        let sum = 0;
+        let prod = 1;
+        arr.forEach(n => {
+          sum += Number(n);
+          prod *= Number(n);
+        })
+        return prod - sum;
+      };
+  </script>
+</body>
+</html>
