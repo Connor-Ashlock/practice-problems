@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var restoreString = function (s, indices) {
+        let res = '';
+        const map = {};
+        for (let i = 0; i < s.length; i++) {
+          map[indices[i]] = s[i];
+        }
+        for (const prop in map) {
+          res += map[prop];
+        }
+        return res;
+      };
+  </script>
+</body>
+</html>
