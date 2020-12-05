@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function missing(arr) {
+        const seqArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i + 1] !== undefined) {
+            seqArr.push(arr[i + 1] - arr[i])
+          }
+        }
+        const pat = seqArr.indexOf(Math.max(...seqArr));
+        return (arr[pat] + arr[pat + 1]) / 2;
+      }
+  </script>
+</body>
+</html>
