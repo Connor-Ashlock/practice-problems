@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function chosenWine(wines) {
+        wines.sort((a, b) => a.price - b.price);
+        if (wines[1]) {
+          return wines[1].name;
+        } else if (wines[0]) {
+          return wines[0].name;
+        } else {
+          return null;
+        }
+      }
+  </script>
+</body>
+</html>
