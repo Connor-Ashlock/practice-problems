@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var maxPower = function (s) {
+        let cur = 1;
+        let max = 0;
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] === s[i + 1]) {
+            cur++;
+          } else {
+            if (cur > max) {
+              max = cur;
+            }
+            cur = 1;
+          }
+        }
+        return max;
+      };
+  </script>
+</body>
+</html>
