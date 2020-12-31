@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var maxProfit = function (prices) {
+        let prof = 0;
+        let initialMax = 0;
+        const min = Math.min(...prices);
+        const max = Math.max(...prices);
+        if (prices.indexOf(min) < prices.indexOf(max)) {
+          initialMax = Math.abs(min - max);
+        }
+        for (let i = 0; i < prices.length - 1; i++) {
+          if (prices[i] < prices[i + 1]) {
+            prof += Math.abs(prices[i] - prices[i + 1]);
+          }
+        }
+        if (initialMax > prof) {
+          return initialMax
+        } else {
+          return prof
+        }
+      };
+  </script>
+</body>
+</html>
