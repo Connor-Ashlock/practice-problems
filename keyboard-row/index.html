@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var findWords = function (words) {
+        const result = [];
+        const row1 = { q: 'q', w: 'w', e: 'e', r: 'r', t: 't', y: 'y', u: 'u', i: 'i', o: 'o', p: 'p' };
+        const row2 = { a: 'a', s: 's', d: 'd', f: 'f', g: 'g', h: 'h', j: 'j', k: 'k', l: 'l' };
+        const row3 = { z: 'z', x: 'x', c: 'c', v: 'v', b: 'b', n: 'n', m: 'm' };
+        for (let i = 0; i < words.length; i++) {
+          const letters = words[i].toLowerCase().split('');
+          const firstLet = letters[0];
+          let checkRow = null;
+          if (row1[firstLet]) {
+            checkRow = row1;
+          } else if (row2[firstLet]) {
+            checkRow = row2;
+          } else {
+            checkRow = row3;
+          }
+          for (let j = 0; j < letters.length; j++) {
+            const curLet = letters[j]
+            if (!checkRow[curLet]) {
+              break;
+            }
+            if (j === letters.length - 1) {
+              result.push(words[i]);
+            }
+          }
+        }
+        return result;
+      };
+
+  </script>
+</body>
+</html>
